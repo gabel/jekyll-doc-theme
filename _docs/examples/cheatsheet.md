@@ -211,6 +211,36 @@ var s = "JavaScript syntax highlighting";
 alert(s);
 ```
 
+```php
+<?php
+
+// base class with member properties and methods
+class Vegetable {
+
+   var $edible;
+   var $color;
+
+   function __construct($edible, $color="green")
+   {
+       $this->edible = $edible;
+       $this->color = $color;
+   }
+
+   function is_edible()
+   {
+       return $this->edible;
+   }
+
+   function what_color()
+   {
+       return $this->color;
+   }
+
+}
+```
+
+
+
 ```python
 s = "Python syntax highlighting"
 print s
