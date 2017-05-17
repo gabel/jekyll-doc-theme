@@ -1,3 +1,6 @@
+$spacing-unit: $line-height-computed;
+$grey-color-light: $gray-light;
+
 @mixin swagger-method($color) {
     border: 1px solid $color;
 
