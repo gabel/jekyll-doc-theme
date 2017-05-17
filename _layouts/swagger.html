@@ -104,15 +104,15 @@ layout: default
 
 var slice = Array.prototype.slice;
 
-function $(expr, parent) {
+function $swagger(expr, parent) {
     return typeof expr === "string" ? (parent || document).querySelector(expr) : expr || null;
 }
 
-function $$(expr, parent) {
+function $$swagger(expr, parent) {
     return slice.call((parent || document).querySelectorAll(expr));
 }
 
-$.bind = function(element, o) {
+$swagger.bind = function(element, o) {
     if (element) {
         for (var event in o) {
             var callback = o[event];
@@ -124,7 +124,7 @@ $.bind = function(element, o) {
     }
 };
 
-$.toggleDetails = function (element) {
+$swagger.toggleDetails = function (element) {
     if (element.classList.contains('open')) {
         element.classList.remove('open');
     }
@@ -136,11 +136,11 @@ $.toggleDetails = function (element) {
 // Initialization
 
 function init() {
-    $$('.swagger-method-title').forEach(function (title) {
-        $.bind(title, {
+    $$swagger('.swagger-method-title').forEach(function (title) {
+        $swagger.bind(title, {
             'click': function (e) {
-                var details = $('.swagger-method-details', title.parentNode)
-                $.toggleDetails(details);
+                var details = $swagger('.swagger-method-details', title.parentNode)
+                $swagger.toggleDetails(details);
                 e.preventDefault();
             }
         });
