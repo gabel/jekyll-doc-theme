@@ -60,6 +60,8 @@ $font-size-h4:            24px !default;
 $font-size-h5:            20px !default;
 $font-size-h6:            14px !default;
 
+$base-font-size: $font-size-base;
+
 //** Unit-less `line-height` for use in components like buttons.
 $line-height-base:        1.846 !default; // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
